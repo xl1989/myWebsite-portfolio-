@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+#mainContent{
+    position: relative;
+    margin-bottom:150px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#ContentUp{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #D6E3EC;
+    padding:150px 30px 30px 30px;
+    margin-bottom: 50px;
+    height:200;
+}
+#ovalImg{
+    background-image: url("Pic/myImg3.png");
+    background-size: cover;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px grey;
+    border:solid 2px white;
+    margin:auto;
+    position: relative; 
+}
+#ContentUp h3{
+    margin-top: 0px;
+    text-align: center;
+    font-size:52;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    position: relative;
+}
+#ContentUp p{
+    text-align: center;
+    font-size: 16;
+    font-weight: 100;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: inline-block;
+    width:35%;
+    margin:auto;
+    position: relative;
+    margin-top:-30px;
+}
+#ContentDown{
+    position: relative;
+    margin: auto;
+    width:70%;
+    border:solid 2px black;
+    padding:50px;
+}
+.UIpic{
+    margin: 5px; 
+    transition: 0.5s;
+    box-shadow: 2px 2px 3px grey;
+}
+#picGroup1{
+    height:40%;
+    width: 100%;
+}
+#picGroup1,#picGroup2{
+    position: relative;
+    width:100%;
+    display: flex;
+    flex-direction:row;  
+    margin: 10px;
+}
+
+#pic1{
+    background:url("Pic/UI1.png");
+    background-size: cover;
+}
+#pic1:hover{
+    height:102%;
+    width:70%;
+}
+#picGroup1:hover #picGroup2{
+     height:52%;
+}
+#pic2{
+     background:url("Pic/UI2.png");
+     background-size: cover;
+}
+#pic2:hover{
+    height:102%;
+    width:70%;
+}
+
+#pic3{
+     background:url("Pic/UI5.png");
+     background-size: cover;
+    width:65%;
+    height:100%;
+}
+#pic3:hover{
+    height:104%;
+    width:120%;
+}
+#pic4{
+     background:url("Pic/UI4.png");
+     background-size: cover;
+}
+#pic5{
+     background:url("Pic/UI3.png");
+     background-size: cover;
+}
+#picGroup2{
+    height:55%;
+    width:100%;
+     transition: 0.5s;
+}
+
+#pic1,#pic2{
+    width:50%;
+    height:100%;
+}
+#picGroup3{
+    position: relative;
+    width:38%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+#picGroup3:hover{
+      height:112%;
+      width:53%;
+}
+#picGroup3:hover #picGroup1{
+     height:50%;
+}
+#pic4,#pic5{
+    width:100%;
+    height:100%;
+}
+
+@media (max-width: 415px){
+    #mainContent{
+        padding-top: 0;
+    }
+    #ContentUp{
+        height:150px;
+        padding:70px 20px 20px 20px;
+    }
+    #ovalImg{
+        height:30px;
+        width:30px
+    }
+    #ContentUp h3{
+        font-size:30px; 
+    }
+    #ContentUp p{
+        width:85%;
+        font-size: 12px;
+    }
+    #ContentDown{
+        padding:10;
+        width:100%;
+        box-sizing: border-box;
+        height:1000;
+    }
+    #picGroup1,#picGroup2{
+        flex-direction: column;
+    }
+    #pic1,#pic2,#pic3,#pic4,#pic5{
+        width:90%;
+        height:100%;
+    }
+    #pic3{
+        height:35%;
+    }
+    #picGroup3{
+        height:75%;
+        width:100%;
+        padding:0;
+        margin: 0;
+        box-sizing:border-box;
+    }
+    #pic1:hover, #pic2:hover{
+        width:90%;
+        height:100%;
+    }
+    #pic3:hover{
+         width:90%;
+         height:35%;
+    }
+    #picGroup3:hover{
+       height:75%;
+       width:100%;
+}
+}

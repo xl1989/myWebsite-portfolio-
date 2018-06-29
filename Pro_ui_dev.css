@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+#contentBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.devGroups{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+    position: relative;
+    padding:35px 150px;
+    box-sizing: border-box;
+}
+video{
+    position: relative;
+    height:430px; 
+    border:solid 3px #D6E3EC;
+    transition: 0.3s;
+    width:760px;;
+}
+video:hover{
+      box-shadow: 0px 0px 10px 5px #D6E3EC;
+}
+.videoInfo{
+       position:relative;
+       width:350px;
+      padding:0;
+}
+.videoInfo h4{
+    position: relative;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+    display: inline-block; 
+    border-bottom: solid 3px #296A77;
+}
+#video1_info{
+    margin-left: 50px;
+}
+#video2_info{
+    margin-right: 50px;
+}
+.description{
+    position: relative;
+    font-size:16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding:0px;
+    margin-top: -10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 415px){
+    .devGroups{
+        flex-direction:column;
+        padding:10px 10px;
+        justify-content: center;
+    }
+    video{
+        height:220px;
+        width:375px;
+        margin-top: 10px;
+    }
+    .videoInfo{
+        position: relative;
+        width:320px;
+        text-align: center;
+    }
+    #video1_info,#video2_info{
+        margin:auto;
+    }
+    #video2_info{
+        order: 2;
+    }
+    .videoInfo h4{
+        font-size: 16px;
+    }
+    .description{
+        font-size: 12px;
+    }
+}
