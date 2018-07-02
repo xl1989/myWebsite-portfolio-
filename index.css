@@ -193,7 +193,7 @@ body{
     position: absolute;
     font-size:22px;
     width:100%;
-    font-weight:500;
+    font-weight:bold;
     bottom: 0px;;
     margin-bottom: 0px;
 }
@@ -203,19 +203,25 @@ body{
 .colorTtile h4{
      border-bottom: 5px solid #A4A0A0;
 }
-#media_hide{
+.media_hide{
     display: none;
 }
 .projects h5{
     margin-top: 5px;
-    font-size:12px;
+    font-size:16px;
     position:relative;
-    font-weight:500;
-    top:220;  
+    font-weight:bolder;
+    top:190;  
     left:50%;
     transform: translateX(-50%);
     width:230px;
     font-family: 'Source Sans Pro', sans-serif;
+    transition:0.5s;
+    opacity: 0;
+}
+.projects:hover h5{
+    top:220;
+    opacity: 1;
 }
 #AboutMedia{
     position: relative;
@@ -357,7 +363,7 @@ a{
     position: relative;
     width:80%;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
 }
 #mediaP{
@@ -405,20 +411,26 @@ a{
     width:45%;
     box-sizing: border-box;
 }
+#conTitle_wrap{
+     border-bottom: solid 1px black;
+     padding: 10px;
+}
 #conTitle{
+    position:relative;
     text-align: center;
     font-size: 36;
-    padding: 10px;
-    border-bottom: solid 1px black;
-    margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
 }
 #conInfo{
+    position: relative;
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 10px;
+}
+.MediaIcon{
+    display:none;
 }
 
 @media (max-width: 414px){
@@ -489,10 +501,10 @@ a{
     h4 a{
         color:black;
     }
-    #media_hide{
+    .media_hide{
         display:block;
     }
-    #media_show{
+    .media_show{
         display: none;
     }
     #media_change a{
@@ -520,6 +532,7 @@ a{
     }
     #AboutMedia{
         padding-left: 18px;
+        display: block;
     }
     #aboutContent{
         width:50%;
@@ -580,12 +593,16 @@ a{
         padding:0px;
         left:50%;
         transform: translateX(-60%);
-        border: none;
     }
     #conInfo{
         font-size: 16px;
     }
     
+    #conTitle_wrap{
+        border: none;
+        height:0;
+        padding:0px;
+    }
     .projects:hover #proOne_back{
     transform: none;
 }
