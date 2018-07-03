@@ -119,6 +119,22 @@ body{
     margin:0;
     position:relative;
     overflow: hidden;
+    transition:1s;
+    transform: none;
+    opacity:1;
+}
+#proTwo{
+    z-index:1;
+}
+.ProUpHide{
+    opacity:0;
+    position: relative;
+     transform:translateY(100%);
+}
+.ProBottomHide{
+     opacity:0;
+    position: relative;
+    transform:translateY(-100%);
 }
 .pro_backs{
     position: absolute;
@@ -170,6 +186,7 @@ body{
    transition:0.1s;
    font-family: 'Lora', serif;
    width:230px;
+   text-transform: uppercase;
 }
 .photoText{
     color:ghostwhite;
@@ -235,7 +252,7 @@ a{
 }
 #transBox{
    background-image: url("Pic/back_left.jpeg");
-   height:450px;
+   height:400px;
 }
 #aboutbox{
     position:relative;
@@ -420,6 +437,8 @@ a{
     text-align: center;
     font-size: 36;
     font-family: 'Playfair Display', serif;
+    transition:0.8s;
+    text-transform: uppercase;
 }
 #conInfo{
     position: relative;
@@ -428,6 +447,19 @@ a{
     font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
     padding-top: 10px;
+    transition:0.8s;
+}
+.contactShow{
+    transform:translateY(0);
+    opacity:1;
+}
+.conTitleHide{
+     opacity:0;
+     transform:translateY(55%);
+}
+.conInfoHide{
+     opacity:0;
+     transform:translateY(-55%);
 }
 .MediaIcon{
     display:none;
@@ -458,6 +490,10 @@ a{
         width: 100%;
         padding:0;
         margin:0;
+    }
+    .ProUpHide,.ProBottomHide{
+      position: relative;
+      transform:translateY(0);
     }
     .projects{
         width:50%;
@@ -585,8 +621,10 @@ a{
         margin:0px;
         width:90%;
     }
-    #conTitle{
-        font-size: 16px;
+   #conTitle{
+      opacity:1;
+       display: block;
+       font-size: 16px;
         position: absolute;
         color:white;
         top:-90px;
@@ -596,12 +634,10 @@ a{
     }
     #conInfo{
         font-size: 16px;
+        opacity: 1;
     }
-    
     #conTitle_wrap{
         border: none;
-        height:0;
-        padding:0px;
     }
     .projects:hover #proOne_back{
     transform: none;
@@ -610,4 +646,7 @@ a{
 .projects:hover #proThree_back{
     transform: none;
 }
+    .conInfoHide,.conTitleHide,.contactShow{
+        display: none;
+    }
 }
